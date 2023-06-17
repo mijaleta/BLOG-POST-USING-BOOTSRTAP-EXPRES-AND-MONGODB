@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Data</h1>
+    <% if (data.length > 0) { %>
+      <% data.forEach(data => { %>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title"><%= data.title %></h5>
+            <p class="card-text"><%= data.description %></p>
+            <img src="/uploads/<%= data.image %>" class="card-img-bottom" alt="Uploaded Image" style="width: 300px; height: 300px">
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No data available.</p>
+    <% } %>
+  </div>
+</body>
+
+</html>
+
